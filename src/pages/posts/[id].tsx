@@ -30,6 +30,7 @@ const PostPage = ({post}: InferGetStaticPropsType<typeof getStaticProps>) => {
                 <meta name="description" content={post.description} />
                 <meta property="og:title" content={post.title} />
                 <meta property="og:description" content={post.description} />
+                <meta property="og:image" content={post.post_image} />
                 <meta property="og:type" content="website" />
             </Head>
             <div className="container mx-auto md:pt-10 space-y-5">
