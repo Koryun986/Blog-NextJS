@@ -45,15 +45,15 @@ const PostPage = ({post}: InferGetStaticPropsType<typeof getStaticProps>) => {
                         <h1 className="font-bold text-2xl md:text-6xl">{post.title}</h1>
                         <div className="text-lg md:text-2xl font-semibold">Description</div>
                         <div className="text-gray-600">{post.description}</div>
-                        <button className="mt-5 rounded-lg text-white py-2 px-3 bg-blue-500 mr-5">
+                        <button className="mt-5 rounded-lg text-white py-2 px-3 bg-blue-500 hover:bg-blue-600 mr-5">
                             <Link href={`/edit-post/${post.id}`}>Edit Post</Link>
                         </button>
-                        <button onClick={handleDeletePost} className="mt-5 rounded-lg text-white py-2 px-3 bg-red-500">
+                        <button onClick={handleDeletePost} className="mt-5 rounded-lg text-white py-2 px-3 bg-red-500 hover:bg-red-600">
                             Delete
                         </button>
                     </div>
                 </div>
-                <button className="mt-5 rounded-lg text-white py-2 px-3 bg-blue-500">
+                <button className="mt-5 rounded-lg text-white py-2 px-3 bg-blue-500 hover:bg-blue-600">
                     <Link href={"/"}>Home Page</Link>
                 </button>
             </div>
