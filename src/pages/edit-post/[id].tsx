@@ -31,7 +31,7 @@ const EditPostPage = ({post}: InferGetStaticPropsType<typeof getStaticProps>) =>
         <div className="container mx-auto py-6">
             <h1 className="text-4xl font-bold">Edit Post</h1>
             <PostForm 
-                post={post}
+                post={editedPost}
                 author={author}
                 handlePostInputChange={handlePostInputChange}
                 handleAuthorInputChange={handleAuthorInputChange}
