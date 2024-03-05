@@ -22,7 +22,7 @@ const PostsList = ({posts}: PostsListProps) => {
 
     return (
         <>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-10 ">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-10">
                 {!!currentPosts?.length && currentPosts.map(post => <PostItem post={post} key={post.id}/>)}
             </div>
             <div className="flex justify-center my-4">

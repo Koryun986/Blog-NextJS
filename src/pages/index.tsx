@@ -27,6 +27,9 @@ export default function Home({
       <Head>
         <title>Blog</title>
         <meta property="description" content="Blog site" />
+        <meta property="og:title" content="Blog" />
+        <meta property="og:description" content="Blog site" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className={`${inter.className} container mx-auto pt-5 px-2 sm:px-0`}>
         <Header posts={posts} setPosts={setLocalPosts} />
