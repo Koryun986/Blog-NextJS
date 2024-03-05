@@ -11,7 +11,7 @@ const PostItem = ({post}: PostItemProps) => {
         <Link href={`/posts/${post.id}`}>
             <div className="border border-gray-200 rounded-lg space-y-3 px-4 py-3 cursor-pointer hover:bg-gray-50 transition-all">
                 <div className="w-full relative">
-                    <Image src={post.post_image} alt="Post Image" width={0} height={0} unoptimized className="w-full" />
+                    <Image src={post.post_image} alt="Post Image" width={0} height={0} unoptimized className="w-full rounded" />
                 </div>
                 <div className="text-2xl font-bold">{post.title}</div>
                 <div className="text-gray-600">{post.description}</div>
