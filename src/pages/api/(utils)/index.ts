@@ -53,7 +53,7 @@ class PostsApi {
         try {
             const data = await this.getPosts();
             const newPosts = data.filter((post) => post.id !== id);
-            await this.setPosts(data);
+            await this.setPosts(newPosts);
             return newPosts;
         } catch (e) {
             throw new Error("Can't add new post");

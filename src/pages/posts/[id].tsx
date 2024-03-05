@@ -8,12 +8,12 @@ import Head from "next/head";
 const PostPage = ({post}: InferGetStaticPropsType<typeof getStaticProps>) => {
     const router = useRouter();
 
-    const handleDeletePost = () => {
+    const handleDeletePost = async () => {
         const isConfirmed = confirm("Do you want to delete the post?");
         if (!isConfirmed) {
             return;
         }
-        fetch("/api/delete-post", {
+        await fetch("/api/delete-post", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
