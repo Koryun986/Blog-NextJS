@@ -16,7 +16,7 @@ const PostsSearch = ({posts, setPosts}: PostsSearchProps) => {
             setPosts(posts);
             return;
         }
-        setPosts([...posts.filter(post => post.title.includes(debouncedValue) || post.description.includes(debouncedValue))])
+        setPosts([...posts.filter(post => post.title.includes(debouncedValue) || post.description.includes(debouncedValue) || post.author.name.includes(debouncedValue))])
     }, [debouncedValue]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
