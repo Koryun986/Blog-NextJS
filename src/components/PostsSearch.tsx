@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { Post } from "@/api/type";
 import useDebounce from "@/hooks/useDebounce";
+import type { Post } from "@/api/type";
 
 interface PostsSearchProps {
     posts: Post[];

@@ -7,7 +7,6 @@ interface PostItemProps {
 }
 
 const PostItem = ({post}: PostItemProps) => {
-
     return (
         <Link href={`/posts/${post.id}`}>
             <div className="border border-gray-200 rounded-lg space-y-3 px-4 py-3 cursor-pointer hover:bg-gray-50 transition-all">
