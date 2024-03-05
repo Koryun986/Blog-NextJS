@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import PostsList from "@/components/PostsList";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,9 +23,15 @@ export default function Home({
   const [localPosts, setLocalPosts] = useState(posts);
   
   return (
-    <div className={`${inter.className} container mx-auto pt-5 px-2 sm:px-0`}>
-      <Header posts={posts} setPosts={setLocalPosts} />
-      {!!posts?.length ? <PostsList posts={localPosts} /> : "No post avaliable"}
-    </div>
+    <>
+      <Head>
+        <title>Blog</title>
+        <meta property="description" content="Blog site" />
+      </Head>
+      <div className={`${inter.className} container mx-auto pt-5 px-2 sm:px-0`}>
+        <Header posts={posts} setPosts={setLocalPosts} />
+        {!!posts?.length ? <PostsList posts={localPosts} /> : "No post avaliable"}
+      </div>
+    </>
   );
 }
